@@ -24,7 +24,7 @@ Once installed, you can test it out immediately using PHP's built-in web server:
 $ cd path/to/install
 $ php -S 0.0.0.0:8080 -t public/ public/index.php
 # OR use the composer alias:
-$ composer serve
+$ composer run --timeout 0 serve
 ```
 
 This will start the cli-server on port 8080, and bind it to all network
@@ -80,8 +80,8 @@ control. (If you want to make the modifications permanent, edit the
 
 ## Using Vagrant
 
-This skeleton includes a `Vagrantfile` based on ubuntu 16.04, and using the
-ondrej/php PPA to provide PHP 7.0. Start it up using:
+This skeleton includes a `Vagrantfile` based on ubuntu 16.04 (bento box)
+with configured Apache2 and PHP 7.0. Start it up using:
 
 ```bash
 $ vagrant up
